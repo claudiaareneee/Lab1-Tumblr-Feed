@@ -12,7 +12,7 @@ import AlamofireImage
 class PhotosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var posts: [[String: Any]] = []
-
+    var photoUrl: URL!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -49,9 +49,19 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as! PostTableViewCell
+
+        if let url = getImageURL(indexPath: indexPath){
+            cell.photoView.af_setImage(withURL: url)
+        }
+
+        
+        return cell
+    }
+    
+    func getImageURL(indexPath: IndexPath) -> URL? {
         let post = posts[indexPath.row]
         
-        if let photos = post["photos"] as? [[String: Any]] {
+        if let photos = post["photos"] as? [[String: Any]]{
             // photos is NOT nil, we can use it!
             // 1.
             let photo = photos[0]
@@ -60,14 +70,24 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
             // 3.
             let urlString = originalSize["url"] as! String
             // 4.
-            let url = URL(string: urlString)
-            cell.photoView.af_setImage(withURL: url!)
+            let url = URL(string: urlString)!
+            return url
         }
-        
-        return cell
+        return nil
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! PhotoDetailsViewController
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        if let url = getImageURL(indexPath: indexPath){
+            vc.photoUrl = url
+        }
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

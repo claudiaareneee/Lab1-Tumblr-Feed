@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490D6A3A214EBA9100C94726 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D6A39214EBA9100C94726 /* PhotoDetailsViewController.swift */; };
 		497C2CBE2145AB3000123D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C2CBD2145AB3000123D3D /* AppDelegate.swift */; };
 		497C2CC32145AB3000123D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497C2CC12145AB3000123D3D /* Main.storyboard */; };
 		497C2CC52145AB3200123D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497C2CC42145AB3200123D3D /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		0015FF641932A1C0DFD55B37 /* Pods_HumansOfNewYorkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HumansOfNewYorkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		490D6A39214EBA9100C94726 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		497C2CBA2145AB3000123D3D /* HumansOfNewYork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HumansOfNewYork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497C2CBD2145AB3000123D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		497C2CC22145AB3000123D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		490D6A3B214EBA9E00C94726 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49C47CED2145B3DF00B184AF /* PhotosViewController.swift */,
+				490D6A39214EBA9100C94726 /* PhotoDetailsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		497C2CB12145AB3000123D3D = {
 			isa = PBXGroup;
 			children = (
@@ -129,8 +140,8 @@
 		497C2CBC2145AB3000123D3D /* HumansOfNewYork */ = {
 			isa = PBXGroup;
 			children = (
+				490D6A3B214EBA9E00C94726 /* View Controllers */,
 				497C2CBD2145AB3000123D3D /* AppDelegate.swift */,
-				49C47CED2145B3DF00B184AF /* PhotosViewController.swift */,
 				49C47CEF2145BA9C00B184AF /* PostTableViewCell.swift */,
 				497C2CC12145AB3000123D3D /* Main.storyboard */,
 				497C2CC42145AB3200123D3D /* Assets.xcassets */,
@@ -380,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490D6A3A214EBA9100C94726 /* PhotoDetailsViewController.swift in Sources */,
 				497C2CBE2145AB3000123D3D /* AppDelegate.swift in Sources */,
 				49C47CEE2145B3DF00B184AF /* PhotosViewController.swift in Sources */,
 				49C47CF02145BA9C00B184AF /* PostTableViewCell.swift in Sources */,

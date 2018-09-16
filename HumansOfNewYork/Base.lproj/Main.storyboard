@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8gs-t6-TKr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Photos View Controller-->
+        <!--Humans of New York-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PhotosViewController" customModule="HumansOfNewYork" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,25 +19,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humans of New York" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sx7-kF-Oi7">
-                                <rect key="frame" x="108.5" y="24" width="158" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="266" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="12D-54-6pg">
-                                <rect key="frame" x="0.0" y="52.5" width="375" height="614.5"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="266" id="JLx-rA-ZGO" customClass="PostTableViewCell" customModule="HumansOfNewYork" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="266" id="JLx-rA-ZGO" customClass="PostTableViewCell" customModule="HumansOfNewYork" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="266"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JLx-rA-ZGO" id="fa5-z1-IIY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="265.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="265.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-9Q-sxU">
-                                                    <rect key="frame" x="15" y="11" width="345" height="244"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-9Q-sxU">
+                                                    <rect key="frame" x="15" y="11" width="319" height="244"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -49,6 +43,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="photoView" destination="AHB-9Q-sxU" id="7DI-bM-AHf"/>
+                                            <segue destination="NrQ-an-9ET" kind="push" id="5Rd-kK-Msi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -56,20 +51,67 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="12D-54-6pg" secondAttribute="bottom" id="QFD-Ap-UAu"/>
-                            <constraint firstItem="sx7-kF-Oi7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="gwk-zC-5gk"/>
-                            <constraint firstItem="sx7-kF-Oi7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nTK-up-R0p"/>
-                            <constraint firstItem="12D-54-6pg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="q4f-Ny-Lsc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="12D-54-6pg" secondAttribute="trailing" id="uyv-5P-37W"/>
-                            <constraint firstItem="12D-54-6pg" firstAttribute="top" secondItem="sx7-kF-Oi7" secondAttribute="bottom" constant="8" id="z0h-3U-Wh7"/>
+                            <constraint firstItem="12D-54-6pg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0hF-fn-grH"/>
+                            <constraint firstItem="12D-54-6pg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dy4-BU-1Jc"/>
+                            <constraint firstItem="12D-54-6pg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UsD-PL-F43"/>
+                            <constraint firstItem="12D-54-6pg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oaa-Qk-hqD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Humans of New York" id="Uyg-gN-ykf"/>
                     <connections>
                         <outlet property="tableView" destination="12D-54-6pg" id="Vo5-Lr-reR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+        </scene>
+        <!--Photo Details View Controller-->
+        <scene sceneID="TmJ-MX-9Zq">
+            <objects>
+                <viewController id="NrQ-an-9ET" customClass="PhotoDetailsViewController" customModule="HumansOfNewYork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="66L-yT-DCw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K90-88-4v0">
+                                <rect key="frame" x="0.0" y="113" width="375" height="240"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K90-88-4v0" firstAttribute="top" secondItem="iGi-e5-7d6" secondAttribute="top" constant="49" id="Kb7-Os-4Lz"/>
+                            <constraint firstItem="iGi-e5-7d6" firstAttribute="bottom" secondItem="K90-88-4v0" secondAttribute="bottom" constant="314" id="iDh-Rl-Teb"/>
+                            <constraint firstAttribute="trailing" secondItem="K90-88-4v0" secondAttribute="trailing" id="td4-4g-y0P"/>
+                            <constraint firstItem="K90-88-4v0" firstAttribute="leading" secondItem="66L-yT-DCw" secondAttribute="leading" id="wSe-4P-1nj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iGi-e5-7d6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qbI-VH-wvY"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="K90-88-4v0" id="Z6O-5b-u5D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTl-tO-pal" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872.8" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ADr-v5-hhP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8gs-t6-TKr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rRR-Rz-9fQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uey-xL-7Iv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V9y-Xk-Uhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
